@@ -87,14 +87,14 @@ nav {
 .container {
     display: flex;
     width: 80vw;
-    margin: 15vh auto 0;
+    margin: 10vh auto 0;
     align-items: center;
     color: white;
 }
 /* informations */
 .info-container {
     width: 30vw;
-    margin-right: 10vh;
+    margin-right: 5vw;
 }
 
 .info-header {
@@ -112,6 +112,7 @@ nav {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 18px;
+    cursor: pointer;
 }
 
 .read-more i {
@@ -129,7 +130,7 @@ img {
 
 .img-container {
     position: relative;
-    width: 40vw;
+    width: 45vw;
 }
 
 /* card */
@@ -181,11 +182,72 @@ img {
     margin-left: 1rem;
 }
 
+@media (max-width: 1350px) {
+    .container {
+        margin-top: 20vh;
+    }
+}
 
+@media (max-width: 1200px) {
+    .img-container {
+        width: 50vw;
+    }
+
+    .container {
+        width: 90vw;
+    }
+
+    .info-container {
+        width: 40vw;
+        /* margin-right: 8vw; */
+    }
+}
+
+@media (max-width: 1000px) {
+    .card-desc {
+        font-size: 18px;
+    }
+
+    .name {
+        font-size: 12px;
+    }
+
+    .role {
+        font-size: 10px;
+    }
+
+    .card {
+        width: 30vw;
+    }
+
+    .info-header {
+        font-size: 36px;
+    }
+
+    .info-message {
+        font-size: 14px;
+    }
+
+    .read-more {
+        font-size: 14px;
+    }
+
+    .info-container {
+        width: 20vw;
+    }
+
+    .img-container {
+        width: 70vw;
+    }
+}
 
 @media (max-width: 800px) {
     .nav-toggle {
         display: block;
+    }
+
+    nav {
+        padding-bottom: 0;
     }
 
     .links-container {
@@ -197,6 +259,66 @@ img {
         justify-content: space-between;
         align-items: center;
         width: 100%;
+    }
+    
+    .card-header {
+        margin-top: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+        margin-top: 0px;
+    }
+
+    .info-container {
+        margin-right: 0;
+        width: 60vw;
+    }
+
+    .info-header {
+        margin-bottom: 15px;
+    }
+    
+    .img-container {
+        width: 90vw;
+        margin-top: 5vh;
+    }
+
+    .card {
+        width: 40vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 50vw;
+        right: 3vh;
+    }
+    
+}
+
+@media (max-width: 500px) {
+    .card {
+        width: 60vw;
+        right: 2vh;
+    }
+
+    
+}
+
+@media (max-width: 400px) {
+    .card {
+        width: 70vw;
+        right: 1vh;
+    }
+
+    .card-header img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .card-desc {
+        margin-top: 10px;
     }
 }
 
