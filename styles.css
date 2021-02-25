@@ -174,6 +174,7 @@ img {
     font-weight: 500;
     margin-right: 1rem;
     margin-left: 1rem;
+    margin-top: 10px;
 }
 
 /* hamburger menu */
@@ -341,7 +342,8 @@ footer a {
     }
 
     .show-links .links-container .links a {
-        padding: 2.5rem 0 0 0;
+        padding: 0;
+        margin: 1.5rem 0;
     }
 
     .nav-header {
@@ -353,6 +355,7 @@ footer a {
 
     .menu-btn {
         display: flex;
+        z-index: 999;
     }
     
     .card-header {
@@ -419,20 +422,3 @@ footer a {
         margin-top: 10px;
     }
 }
-
-
-/* .show-links, .links-container {
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    background-color: red;
-    z-index: 300;
-} */
-
-/* .show-links .links-container {
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    background-color: red;
-    z-index: 300;
-} */
