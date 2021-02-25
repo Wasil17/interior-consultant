@@ -74,15 +74,8 @@ nav {
     display: flex;
 }
 
-.nav-toggle {
-    display: none;
-    background: transparent;
-    color: white;
-    border-color: transparent;
-    cursor: pointer;
-    font-size: 1.5rem;
-    outline: none;
-}
+
+
 
 
 .container {
@@ -183,6 +176,64 @@ img {
     margin-left: 1rem;
 }
 
+/* hamburger menu */
+.menu-btn {
+    background: transparent;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.menu-btn__hamburger {
+    width: 24px;
+    height: 2px;
+    background-color: white;
+    border-radius: 4px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__hamburger::before,
+.menu-btn__hamburger::after {
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    border-radius: 4px;
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    content: '';
+}
+
+.menu-btn__hamburger::before {
+    transform: translateY(10px);
+}
+
+.menu-btn__hamburger::after {
+    transform: translateY(-10px);
+}
+
+.menu-btn.open .menu-btn__hamburger {
+    transform: translateX(0%);
+    background-color: transparent;
+}
+
+.menu-btn.open .menu-btn__hamburger::before {
+    transform: rotate(-45deg);
+}
+
+.menu-btn.open .menu-btn__hamburger::after {
+    transform: rotate(45deg);
+}
+
+
+/* footer */
+
 footer {
     position: absolute;
     left: 0;
@@ -217,7 +268,6 @@ footer a {
 
     .info-container {
         width: 40vw;
-        /* margin-right: 8vw; */
     }
 }
 
@@ -261,10 +311,6 @@ footer a {
 }
 
 @media (max-width: 800px) {
-    .nav-toggle {
-        display: block;
-    }
-
     nav {
         padding-bottom: 0;
     }
@@ -273,11 +319,40 @@ footer a {
         display: none;
     }
 
+    .show-links .links-container {
+        display: block;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #181719;
+        z-index: 300;
+    }
+
+    .show-links .links-container .links {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .show-links .links-container .links a {
+        padding: 2.5rem 0 0 0;
+    }
+
     .nav-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
+    }
+
+    .menu-btn {
+        display: flex;
     }
     
     .card-header {
@@ -306,7 +381,7 @@ footer a {
     .card {
         width: 40vw;
     }
-    
+
     footer {
         position: relative;
     }
@@ -345,8 +420,19 @@ footer a {
     }
 }
 
-@media ()
 
+/* .show-links, .links-container {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-color: red;
+    z-index: 300;
+} */
 
-
-
+/* .show-links .links-container {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-color: red;
+    z-index: 300;
+} */
