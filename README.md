@@ -52,4 +52,4 @@ Mobile verison preview:
 
 ## Contact
 
-- GitHub [@Wasil17](https://github.com/Wasil17)
+- GitHub [@d-wasilewski](https://github.com/d-wasilewski)
